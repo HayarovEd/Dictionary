@@ -1,8 +1,6 @@
 package com.edurda77.dictionary.viewmodel
 
-import android.content.Context
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.ViewModel
 import com.edurda77.dictionary.model.data.WordTranslate
 
 interface MainActivityViewModelContract {

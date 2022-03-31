@@ -7,9 +7,9 @@ import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.observers.DisposableObserver
 import io.reactivex.rxjava3.schedulers.Schedulers
 
-class MainActivityViewModel /*Dagger - @Inject constructor*/(private val caseRepoImpl: CaseRepoImpl) :
+class MainActivityViewModel(private val caseRepoImpl: CaseRepoImpl) :
     MainActivityViewModelContract.ViewModel() {
-    //private val caseRepoImpl = CaseRepoImpl() without DI
+
     override val liveData: MutableLiveData<List<WordTranslate>> =
         MutableLiveData<List<WordTranslate>>()
 
@@ -28,12 +28,10 @@ class MainActivityViewModel /*Dagger - @Inject constructor*/(private val caseRep
 
             override fun onError(error: Throwable) {
                 error.message
-                //Toast.makeText(context, "${R.string.error} $e", Toast.LENGTH_SHORT).show()
             }
 
             override fun onComplete() {
 
-                //Toast.makeText(context, R.string.all_loading, Toast.LENGTH_SHORT).show()
             }
 
         }

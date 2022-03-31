@@ -9,6 +9,7 @@ import com.edurda77.dictionary.model.data.WordTranslate
 
 class TranslateHolder(inflater: LayoutInflater, parent: ViewGroup) :
     RecyclerView.ViewHolder(inflater.inflate(R.layout.item_translate, parent, false)) {
+
     private var textItem: TextView? = null
     private var translateItem: TextView? = null
 
