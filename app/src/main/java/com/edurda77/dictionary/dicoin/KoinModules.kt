@@ -4,7 +4,6 @@ import com.edurda77.dictionary.model.data.BASE_URL
 import com.edurda77.dictionary.model.datasource.ApiService
 import com.edurda77.dictionary.model.datasource.CaseRepoImpl
 import com.edurda77.dictionary.viewmodel.MainActivityViewModel
-import com.jakewharton.retrofit2.adapter.kotlin.coroutines.experimental.CoroutineCallAdapterFactory
 import hu.akarnokd.rxjava3.retrofit.RxJava3CallAdapterFactory
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -26,8 +25,7 @@ val netModule = module {
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
-            //.addCallAdapterFactory(RxJava3CallAdapterFactory.create())
-            .addCallAdapterFactory(CoroutineCallAdapterFactory())
+            .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
             .build()
     }
     single { provideRetrofit() }
