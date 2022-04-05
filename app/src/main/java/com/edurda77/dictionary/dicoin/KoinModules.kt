@@ -1,8 +1,13 @@
 package com.edurda77.dictionary.dicoin
 
+import androidx.room.Room
 import com.edurda77.dictionary.model.data.BASE_URL
+import com.edurda77.dictionary.model.data.NAME_BD
 import com.edurda77.dictionary.model.datasource.ApiService
 import com.edurda77.dictionary.model.datasource.CaseRepoImpl
+import com.edurda77.dictionary.model.db.HistoryDao
+import com.edurda77.dictionary.model.db.HistoryDaoImpl
+import com.edurda77.dictionary.model.db.HistoryDataBase
 import com.edurda77.dictionary.viewmodel.MainActivityViewModel
 import hu.akarnokd.rxjava3.retrofit.RxJava3CallAdapterFactory
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -35,4 +40,18 @@ val repositoryModule = module {
         return CaseRepoImpl(api)
     }
     single { provideUserRepository(get()) }
+}
+val dbModule = module {
+    single {
+        Room.databaseBuilder(
+            get(), HistoryDataBase::class.java,
+            NAME_BD
+        ).build()
+    }
+    single { get<HistoryDataBase>().historyDao() }
+    fun provideUserRepositoryDb (historyDao: HistoryDao): HistoryDaoImpl{
+        return HistoryDaoImpl(historyDao)
+    }
+    single { provideUserRepositoryDb(get()) }
+
 }

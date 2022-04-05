@@ -1,14 +1,14 @@
 package com.edurda77.dictionary.model.db
 
 import androidx.room.*
-import com.edurda77.dictionary.model.data.NOTE_TABLE
-import com.edurda77.dictionary.model.data.NOTE_WORD
+import com.edurda77.dictionary.model.data.HISTORY_TABLE
+import com.edurda77.dictionary.model.data.WORD
 
 interface HistoryDao {
-    @Query("SELECT * FROM $NOTE_TABLE")
+    @Query("SELECT * FROM $HISTORY_TABLE")
     fun getAllRecords(): List<HistoryEntity>
 
-    @Query("SELECT * FROM $NOTE_TABLE WHERE $NOTE_WORD=:word")
+    @Query("SELECT * FROM $HISTORY_TABLE WHERE $WORD=:word")
     fun getDataByWord(word: String): HistoryEntity
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
@@ -23,6 +23,6 @@ interface HistoryDao {
     @Delete
     fun delete(entity: HistoryEntity)
 
-    @Query("DELETE FROM $NOTE_TABLE")
+    @Query("DELETE FROM $HISTORY_TABLE")
     fun clearNotes()
 }

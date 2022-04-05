@@ -1,11 +1,12 @@
 package com.edurda77.dictionary.model.db
 
 import androidx.room.Database
+import androidx.room.RoomDatabase
 
 @Database(
     entities = [HistoryEntity::class], version = 1, exportSchema =
     false
 )
-interface HistoryDataBase {
+abstract class HistoryDataBase  : RoomDatabase(){
     abstract fun historyDao(): HistoryDao
 }
