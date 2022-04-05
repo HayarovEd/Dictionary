@@ -21,5 +21,11 @@
         android:background="@color/teal_700"
         android:textSize="@dimen/text_size_12" />
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/half_margin" />
+
 
 </LinearLayout>
