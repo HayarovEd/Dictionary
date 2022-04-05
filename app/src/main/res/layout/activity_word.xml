@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/half_margin"
         android:background="@color/teal_700"
-        android:textSize="@dimen/text_size_12" />
+        android:textSize="@dimen/text_size_25" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/word_recycled_view"

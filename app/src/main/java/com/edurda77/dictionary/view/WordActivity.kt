@@ -15,7 +15,6 @@ class WordActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         val arguments = intent.extras
-        //val wordTranslate: WordTranslate
         if (arguments != null) {
             val wordTranslate =
                 arguments.getSerializable(WordTranslate::class.java.simpleName) as WordTranslate
