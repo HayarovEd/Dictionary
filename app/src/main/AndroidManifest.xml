@@ -3,6 +3,7 @@
     package="com.edurda77.dictionary">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -11,6 +12,9 @@
         android:roundIcon="@drawable/ic_dictionary"
         android:supportsRtl="true"
         android:theme="@style/Theme.Dictionary">
+        <activity
+            android:name=".view.WordActivity"
+            android:exported="false" />
         <activity
             android:name=".view.MainActivity"
             android:exported="true">
