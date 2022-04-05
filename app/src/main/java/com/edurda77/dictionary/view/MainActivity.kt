@@ -1,5 +1,6 @@
 package com.edurda77.dictionary.view
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -35,7 +36,15 @@ class MainActivity : AppCompatActivity() {
             this,
             LinearLayoutManager.VERTICAL, false
         )
-        recyclerView.adapter = TranslateAdapter(list)
+        val stateClickListener: TranslateAdapter.OnStateClickListener =
+            object : TranslateAdapter.OnStateClickListener {
+                override fun onStateClick(word: WordTranslate, position: Int) {
+                    val intent = Intent(this@MainActivity, WordActivity::class.java)
+                    intent.putExtra(WordTranslate::class.java.simpleName, word)
+                    startActivity(intent)
+                }
+            }
+        recyclerView.adapter = TranslateAdapter(list, stateClickListener)
     }
 
 }
