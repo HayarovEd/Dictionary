@@ -12,5 +12,11 @@
         android:layout_margin="@dimen/half_margin"
         android:background="@color/teal_700"
         android:textSize="@dimen/text_size_12" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/history_recycled_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/half_margin"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
