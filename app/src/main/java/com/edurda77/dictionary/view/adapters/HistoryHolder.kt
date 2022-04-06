@@ -1,4 +1,4 @@
-package com.edurda77.dictionary.view
+package com.edurda77.dictionary.view.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

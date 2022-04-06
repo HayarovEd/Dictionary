@@ -1,10 +1,9 @@
-package com.edurda77.dictionary.view
+package com.edurda77.dictionary.view.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.edurda77.dictionary.model.data.HistoryEntity
-import com.edurda77.dictionary.model.data.WordTranslate
 
 
 class HistoryAdapter(

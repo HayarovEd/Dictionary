@@ -1,4 +1,4 @@
-package com.edurda77.dictionary.view
+package com.edurda77.dictionary.view.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -13,13 +13,10 @@ import com.edurda77.dictionary.model.data.Meanings
 class WordHolder(inflater: LayoutInflater, parent: ViewGroup) :
     RecyclerView.ViewHolder(inflater.inflate(R.layout.item_word, parent, false)) {
 
-    private var wordTextView: TextView? = null
-    private var wordImageView: ImageView? = null
+    private var wordTextView: TextView? = itemView.findViewById(R.id.word_item)
+    private var wordImageView: ImageView? = itemView.findViewById(R.id.image_word_item)
 
-    init {
-        wordTextView = itemView.findViewById(R.id.word_item)
-        wordImageView = itemView.findViewById(R.id.image_word_item)
-    }
+
 
     fun bind(meanings: Meanings) {
         wordTextView?.text=meanings.translation.textTranslation

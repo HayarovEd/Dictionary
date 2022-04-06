@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.edurda77.dictionary.databinding.ActivityHistoryBinding
 import com.edurda77.dictionary.model.data.HistoryEntity
+import com.edurda77.dictionary.view.adapters.HistoryAdapter
 import com.edurda77.dictionary.viewmodel.HistoryActivityViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
