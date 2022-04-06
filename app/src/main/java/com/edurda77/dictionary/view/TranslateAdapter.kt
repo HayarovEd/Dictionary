@@ -1,6 +1,5 @@
 package com.edurda77.dictionary.view
 
-import TranslateHolder
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView

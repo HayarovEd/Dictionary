@@ -1,12 +1,8 @@
-package com.edurda77.dictionary.model.db
+package com.edurda77.dictionary.model.data
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.edurda77.dictionary.model.data.DESCRTIPTION
-import com.edurda77.dictionary.model.data.NOTE_DESCRTIPTION
-import com.edurda77.dictionary.model.data.HISTORY_TABLE
-import com.edurda77.dictionary.model.data.WORD
 import java.io.Serializable
 
 @Entity(tableName = HISTORY_TABLE)

@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dictionary">
         <activity
+            android:name=".view.HistoryActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.WordActivity"
             android:exported="false" />
         <activity
