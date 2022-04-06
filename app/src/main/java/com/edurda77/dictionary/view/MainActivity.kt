@@ -27,6 +27,10 @@ class MainActivity : AppCompatActivity() {
         viewModel.liveData.observe(this) {
             setOotRecycledView(it)
         }
+        binding.history.setOnClickListener {
+            val intent = Intent(this@MainActivity, HistoryActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun setOotRecycledView(list: List<WordTranslate>) {

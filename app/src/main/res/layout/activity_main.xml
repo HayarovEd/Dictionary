@@ -27,6 +27,14 @@
         android:layout_margin="@dimen/half_margin"
         android:background="@color/teal_200"
         android:text="@string/search" />
+    <Button
+        android:id="@+id/history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/half_margin"
+        android:background="@color/teal_200"
+        android:text="@string/history" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycled_view"

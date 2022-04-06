@@ -8,6 +8,7 @@ import com.edurda77.dictionary.model.datasource.CaseRepoImpl
 import com.edurda77.dictionary.model.db.HistoryDao
 import com.edurda77.dictionary.model.db.HistoryDaoImpl
 import com.edurda77.dictionary.model.db.HistoryDataBase
+import com.edurda77.dictionary.viewmodel.HistoryActivityViewModel
 import com.edurda77.dictionary.viewmodel.MainActivityViewModel
 import hu.akarnokd.rxjava3.retrofit.RxJava3CallAdapterFactory
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -16,8 +17,11 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 
-val viewModelModule = module {
-    viewModel { MainActivityViewModel(get(), get ()) }
+val mainViewModelModule = module {
+    viewModel { MainActivityViewModel(get(), get()) }
+}
+val historyViewModelModule = module {
+    viewModel { HistoryActivityViewModel(get()) }
 }
 val apiModule = module {
     fun provideUserApi(retrofit: Retrofit): ApiService {
