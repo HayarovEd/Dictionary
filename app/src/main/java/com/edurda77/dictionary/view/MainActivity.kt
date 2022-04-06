@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.edurda77.dictionary.databinding.ActivityMainBinding
 import com.edurda77.dictionary.model.data.WordTranslate
+import com.edurda77.dictionary.view.adapters.TranslateAdapter
 import com.edurda77.dictionary.viewmodel.MainActivityViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

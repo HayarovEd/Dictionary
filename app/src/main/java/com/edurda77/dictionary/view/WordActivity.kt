@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.edurda77.dictionary.databinding.ActivityWordBinding
 import com.edurda77.dictionary.model.data.Meanings
 import com.edurda77.dictionary.model.data.WordTranslate
+import com.edurda77.dictionary.view.adapters.WordAdapter
 
 class WordActivity : AppCompatActivity() {
     private lateinit var binding: ActivityWordBinding
