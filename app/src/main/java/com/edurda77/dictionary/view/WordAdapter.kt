@@ -1,12 +1,9 @@
 package com.edurda77.dictionary.view
 
-import TranslateHolder
-import WordHolder
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.edurda77.dictionary.model.data.Meanings
-import com.edurda77.dictionary.model.data.WordTranslate
 
 
 class WordAdapter(

@@ -1,3 +1,5 @@
+package com.edurda77.dictionary.view
+
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView

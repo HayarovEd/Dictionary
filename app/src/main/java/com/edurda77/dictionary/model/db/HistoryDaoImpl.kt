@@ -1,5 +1,7 @@
 package com.edurda77.dictionary.model.db
 
+import com.edurda77.dictionary.model.data.HistoryEntity
+
 class HistoryDaoImpl(private val historyDao: HistoryDao) : HistoryDao {
     override fun getAllRecords() =
         historyDao.getAllRecords()

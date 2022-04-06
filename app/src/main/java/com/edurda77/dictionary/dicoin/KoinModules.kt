@@ -17,7 +17,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 
 val viewModelModule = module {
-    viewModel { MainActivityViewModel(get()) }
+    viewModel { MainActivityViewModel(get(), get ()) }
 }
 val apiModule = module {
     fun provideUserApi(retrofit: Retrofit): ApiService {
@@ -34,12 +34,19 @@ val netModule = module {
             .build()
     }
     single { provideRetrofit() }
+    single {
+        Room.databaseBuilder(
+            get(), HistoryDataBase::class.java,
+            NAME_BD
+        ).build()
+    }
+    single { get<HistoryDataBase>().historyDao() }
 }
 val repositoryModule = module {
     fun provideUserRepository(api: ApiService): CaseRepoImpl {
         return CaseRepoImpl(api)
     }
-    single { provideUserRepository(get()) }
+    single { provideUserRepository(api=get()) }
 }
 val dbModule = module {
     single {

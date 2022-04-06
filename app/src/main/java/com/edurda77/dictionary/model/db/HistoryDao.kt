@@ -2,8 +2,9 @@ package com.edurda77.dictionary.model.db
 
 import androidx.room.*
 import com.edurda77.dictionary.model.data.HISTORY_TABLE
+import com.edurda77.dictionary.model.data.HistoryEntity
 import com.edurda77.dictionary.model.data.WORD
-
+@Dao
 interface HistoryDao {
     @Query("SELECT * FROM $HISTORY_TABLE")
     fun getAllRecords(): List<HistoryEntity>
