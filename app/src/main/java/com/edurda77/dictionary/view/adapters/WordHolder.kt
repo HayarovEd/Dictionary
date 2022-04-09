@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.edurda77.dictionary.R
 import com.edurda77.dictionary.model.data.HTTPS_URL
-import com.edurda77.dictionary.model.data.Meanings
+import com.edurda77.mylibrary.Meanings
 
 class WordHolder(inflater: LayoutInflater, parent: ViewGroup) :
     RecyclerView.ViewHolder(inflater.inflate(R.layout.item_word, parent, false)) {

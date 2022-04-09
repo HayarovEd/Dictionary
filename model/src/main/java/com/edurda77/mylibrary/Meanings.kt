@@ -1,4 +1,4 @@
-package com.edurda77.dictionary.model.data
+package com.edurda77.mylibrary
 
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable

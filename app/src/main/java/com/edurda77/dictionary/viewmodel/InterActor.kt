@@ -2,10 +2,10 @@
 package com.edurda77.dictionary.viewmodel
 
 import androidx.lifecycle.MutableLiveData
-import com.edurda77.dictionary.model.data.HistoryEntity
-import com.edurda77.dictionary.model.data.WordTranslate
-import com.edurda77.dictionary.model.datasource.CaseRepoImpl
-import com.edurda77.dictionary.model.db.HistoryDaoImpl
+import com.edurda77.mylibrary.HistoryEntity
+import com.edurda77.mylibrary.WordTranslate
+import com.edurda77.repository.CaseRepoImpl
+import com.edurda77.repository.HistoryDaoImpl
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.observers.DisposableObserver
 import io.reactivex.rxjava3.schedulers.Schedulers

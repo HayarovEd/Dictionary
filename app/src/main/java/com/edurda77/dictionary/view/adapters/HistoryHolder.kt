@@ -2,15 +2,10 @@ package com.edurda77.dictionary.view.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.edurda77.dictionary.R
-import com.edurda77.dictionary.model.data.HTTPS_URL
-import com.edurda77.dictionary.model.data.HistoryEntity
-import com.edurda77.dictionary.model.data.WordTranslate
+import com.edurda77.mylibrary.HistoryEntity
 
 class  HistoryHolder(inflater: LayoutInflater, parent: ViewGroup) :
     RecyclerView.ViewHolder(inflater.inflate(R.layout.item_history, parent, false)) {

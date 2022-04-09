@@ -1,8 +1,7 @@
 package com.edurda77.dictionary.viewmodel
 
 import androidx.lifecycle.LiveData
-import com.edurda77.dictionary.model.data.HistoryEntity
-import com.edurda77.dictionary.model.data.WordTranslate
+import com.edurda77.mylibrary.HistoryEntity
 
 interface HistoryActivityViewModelContract {
     abstract class ViewModel :androidx.lifecycle.ViewModel(){

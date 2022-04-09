@@ -1,6 +1,8 @@
-package com.edurda77.dictionary.model.datasource
+package com.edurda77.repository
 
-import com.edurda77.dictionary.model.data.WordTranslate
+import com.edurda77.mylibrary.WordTranslate
+import com.edurda77.repository.ApiService
+import com.edurda77.repository.CaseRepo
 import io.reactivex.rxjava3.core.Observable
 
 

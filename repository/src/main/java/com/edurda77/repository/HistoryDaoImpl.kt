@@ -1,6 +1,7 @@
-package com.edurda77.dictionary.model.db
+package com.edurda77.repository
 
-import com.edurda77.dictionary.model.data.HistoryEntity
+import com.edurda77.mylibrary.HistoryEntity
+import com.edurda77.repository.HistoryDao
 
 class HistoryDaoImpl(private val historyDao: HistoryDao) : HistoryDao {
     override fun getAllRecords() =

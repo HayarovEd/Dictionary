@@ -1,8 +1,8 @@
 package com.edurda77.dictionary.viewmodel
 
 import androidx.lifecycle.MutableLiveData
-import com.edurda77.dictionary.model.data.HistoryEntity
-import com.edurda77.dictionary.model.db.HistoryDaoImpl
+import com.edurda77.mylibrary.HistoryEntity
+import com.edurda77.repository.HistoryDaoImpl
 
 class HistoryActivityViewModel(
     private val historyDaoImpl: HistoryDaoImpl,
