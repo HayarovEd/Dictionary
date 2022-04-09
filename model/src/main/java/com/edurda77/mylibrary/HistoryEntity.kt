@@ -1,4 +1,4 @@
-package com.edurda77.dictionary.model.data
+package com.edurda77.mylibrary
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -10,6 +10,6 @@ class HistoryEntity (
     @PrimaryKey
     @ColumnInfo(name = WORD)
     val word: String,
-    @ColumnInfo(name = DESCRTIPTION)
+    @ColumnInfo(name = DESCRIPTION)
     val description: String
 ): Serializable

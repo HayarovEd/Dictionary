@@ -1,9 +1,8 @@
-package com.edurda77.dictionary.model.db
+package com.edurda77.repository
 
 import androidx.room.*
-import com.edurda77.dictionary.model.data.HISTORY_TABLE
-import com.edurda77.dictionary.model.data.HistoryEntity
-import com.edurda77.dictionary.model.data.WORD
+import com.edurda77.mylibrary.HistoryEntity
+
 @Dao
 interface HistoryDao {
     @Query("SELECT * FROM $HISTORY_TABLE")

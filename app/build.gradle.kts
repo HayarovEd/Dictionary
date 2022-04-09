@@ -81,4 +81,8 @@ dependencies {
     kapt ("androidx.room:room-compiler:2.4.2")
     implementation ("androidx.room:room-ktx:2.4.2")
 
+    //Modules
+    implementation(project(":model"))
+    implementation(project(":repository"))
+
 }

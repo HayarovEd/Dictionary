@@ -9,7 +9,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.edurda77.dictionary.R
 import com.edurda77.dictionary.model.data.HTTPS_URL
-import com.edurda77.dictionary.model.data.WordTranslate
+import com.edurda77.mylibrary.WordTranslate
 
 class  TranslateHolder(inflater: LayoutInflater, parent: ViewGroup) :
     RecyclerView.ViewHolder(inflater.inflate(R.layout.item_translate, parent, false)) {
