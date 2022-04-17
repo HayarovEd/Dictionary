@@ -10,4 +10,5 @@
     <color name="background_edit_text">#20E628</color>
     <color name="background_item">#8BC34A</color>
     <color name="background_word_item">#00BCD4</color>
+    <color name="screen_background">#DD2C00</color>
 </resources>
