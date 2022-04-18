@@ -1,8 +1,10 @@
 package com.edurda77.dictionary.view
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.edurda77.dictionary.databinding.ActivityMainBinding
@@ -10,6 +12,8 @@ import com.edurda77.mylibrary.WordTranslate
 import com.edurda77.dictionary.view.adapters.TranslateAdapter
 import com.edurda77.dictionary.viewmodel.MainActivityViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import java.util.concurrent.Executor
+import java.util.concurrent.Executors
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -20,7 +24,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
 
         super.onCreate(savedInstanceState)
+        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.S) {
+            installSplashScreen()
+        }
         setContentView(binding.root)
+
         binding.search.setOnClickListener {
             val searchWord = binding.enter.text.toString()
             viewModel.getData(searchWord)
