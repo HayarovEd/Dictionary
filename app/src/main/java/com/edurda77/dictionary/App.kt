@@ -24,6 +24,7 @@ class App : Application() {
     }
 
 }
+
 /* Dagger - class App : Application(), HasAndroidInjector{
     @Inject
     lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Any>
